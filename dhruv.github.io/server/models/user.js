@@ -1,3 +1,10 @@
+/**
+ * File Name:user.js
+ * Author's Name: Dhruv vyas
+ * Student ID:100734385
+ * WebSite Name:My portfolio
+ * file Description:This is a user file.
+ */
 // require modules for our user Model
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');

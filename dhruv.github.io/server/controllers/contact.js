@@ -1,3 +1,11 @@
+
+/**
+ * File Name:contact.js
+ * Author's Name: Dhruv vyas
+ * Student ID:100734385
+ * WebSite Name:My portfolio
+ * file Description:This is a Contact file.
+ */
 let express = require('express');
 let router = express.Router();
 
@@ -33,8 +41,8 @@ module.exports.displayAddPage = (req, res, next) => {
 module.exports.processAddPage = (req, res, next) => {
     let newContact = contactModel({
         "firstName": req.body.firstName,
-        "lastName": req.body.lastName,
-        "contactNumber": req.body.contactNumber
+        "contactNumber": req.body.contactNumber,
+        "emailAddress": req.body.emailAddress
     });
 
     contactModel.create(newContact, (err, contactModel) =>
@@ -81,8 +89,9 @@ module.exports.processEditPage = (req, res, next) => {
     let updatedContact = contactModel({
         "_id":id,
         "firstName": req.body.firstName,
-        "lastName": req.body.lastName,
-        "contactNumber": req.body.contactNumber
+        "contactNumber": req.body.contactNumber,
+        "emailAddress": req.body.emailAddress
+        
     });
 
     contactModel.update({_id: id}, updatedContact, (err) =>{

@@ -1,3 +1,4 @@
+
 <%- include ../partials/head.ejs %>
 <% include ../partials/header.ejs %>
 
@@ -12,9 +13,9 @@
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row -->
                 <tr>
-                    <th class="text-center">First Name</th>
-                    <th class="text-center">Last Name</th>
+                    <th class="text-center">Contact Name</th>
                     <th class="text-center">Contact Number</th>
+                    <th class="text-center">Email Address</th>
                     <th class="text-center"></th>
                     <th class="text-center"></th>
                 </tr>
@@ -23,8 +24,8 @@
                 <% for(let count = 0; count < contactList.length; count++) { %>
                 <tr>
                     <td class="text-center"><%= contactList[count].firstName %></td>
-                    <td class="text-center"><%= contactList[count].lastName %></td>
                     <td class="text-center"><%= contactList[count].contactNumber %></td>
+                    <td class="text-center"><%= contactList[count].emailAddress %></td>
                     <td class="text-center">
                         <a href="/contact-list/edit/<%= contactList[count]._id %>" 
                             class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
